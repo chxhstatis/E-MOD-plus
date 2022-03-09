@@ -36,7 +36,6 @@ def get_size(image_dir):
     return max_w, max_h
 
 
-# 获取每个图块所在坐标
 def get_coordDict(image_dir):
     for root, dirs, files in os.walk(image_dir):
         for file in files:
@@ -51,7 +50,7 @@ def get_coordDict(image_dir):
     # print(image_numDict)
 
 
-# 组合图片 using 224 px
+# 224 px
 def compose(composed_size, the_label, the_softmax):
     # print(composed_size)
     to_image = Image.new('RGB', (composed_size[0] * IMG_SIZE, composed_size[1] * IMG_SIZE), color=(255, 255, 225))
