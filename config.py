@@ -14,22 +14,6 @@ clinical = False
 zooming = 20
 NUM_CLASSES = 2  # positive/negative (features)
 classes = {0: 'Hyperplasia', 1: 'Mild dysplasia', 2: 'Moderate dysplasia', 3: 'Severe dysplasia'}
-feature_dict = {1: '上皮层次紊乱',
-                2: '基底细胞极性消失',
-                3: '上皮钉突呈水底状',
-                4: '有丝分裂象增加',
-                5: '上皮浅表出现有丝分裂',
-                6: '角化不良',
-                7: '上皮钉突中出现角化珠',
-                8: '细胞黏着力下降',
-                9: '细胞核大小不均',
-                10: '细胞核多形性',
-                11: '细胞大小不均',
-                12: '细胞多形性',
-                13: '核浆比增加',
-                14: '异常有丝分裂象',
-                15: '核仁增大增多',
-                16: '核染色深'}
 english_dict = {1: 'irregular epithelial stratification',
                 2: 'loss of polarity of basal cells',
                 3: 'drop-shaped rete ridges',
@@ -88,7 +72,7 @@ def predict_glm(array, t=0):
 # print(predict_glm(test))
 
 # CNN
-model_dir = '../../OLK_16/data/saved_model/'  # model of 12 features
-EMOD = '../Revise2/data/saved_model/PDT_EfficientNet-B0_224_20_LR4_4/'  # model of dysplasia prediction
+model_dir = 'saved_model/'  # model of 12 features
+EMOD = 'saved_model/'  # model of dysplasia prediction
 # one prediction model + 12 feature detection model
 # now models are in saved_model
